@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: credenciales
+  credenciales:
+    clave-secreta: "MiClaveSecreta16"
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/credenciales?createDatabaseIfNotExist=true
+    username: root
+    password: toor
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+  servlet:
+    multipart:
+      max-request-size: -1
+      max-file-size: -1
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO
